@@ -1,11 +1,15 @@
 {
   "name": "dar-autocomplete",
-  "version": "0.0.1",
-  "description": "Headless Danish address autocomplete using Danmarks Adresseregister (DAR)",
+  "version": "0.1.0",
+  "description": "Framework-agnostic Danish address autocomplete backed by Adressevaelger.dk",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "exports": {
     ".": {
@@ -15,30 +19,32 @@
     "./browser": {
       "types": "./dist/browser.d.ts",
       "import": "./dist/browser.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "prepublishOnly": "npm run build && npm test"
-  },
-  "devDependencies": {
-    "typescript": "^7.0.2",
-    "vitest": "^5.0.0"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json && cp src/style.css dist/style.css",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test"
   },
   "keywords": [
     "dar",
-    "dawa",
     "adresse",
     "address",
     "autocomplete",
     "denmark",
-    "danish",
-    "adressevaelger",
-    "danmarks-adresseregister",
-    "danmark"
+    "adressevaelger"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
 }

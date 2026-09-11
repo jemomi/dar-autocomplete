@@ -1,0 +1,77 @@
+.dar-autocomplete {
+  position: relative;
+  width: 100%;
+  font: inherit;
+}
+
+.dar-autocomplete__field {
+  position: relative;
+}
+
+.dar-autocomplete__input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.75rem;
+  border: 1px solid #8a8a8a;
+  border-radius: .375rem;
+  background: #fff;
+  padding: .625rem .75rem;
+  color: inherit;
+  font: inherit;
+}
+
+.dar-autocomplete__input:hover { border-color: #444; }
+.dar-autocomplete__input:focus { outline: 2px solid Highlight; outline-offset: 1px; }
+.dar-autocomplete__input[aria-invalid="true"] { border-color: #b42318; }
+.dar-autocomplete__input:disabled { cursor: not-allowed; opacity: .65; }
+.dar-autocomplete__input--attached { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+.dar-autocomplete__panel {
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-top: 0;
+  border-radius: 0 0 .375rem .375rem;
+  background: #fff;
+  box-shadow: 0 .25rem .75rem rgb(0 0 0 / .12);
+}
+
+.dar-autocomplete__listbox {
+  max-height: 15rem;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.dar-autocomplete__option,
+.dar-autocomplete__message {
+  padding: .65rem .75rem;
+}
+
+.dar-autocomplete__option { cursor: pointer; }
+.dar-autocomplete__option--active,
+.dar-autocomplete__option:hover { background: #f2f4f7; }
+
+.dar-autocomplete__error {
+  margin: .25rem 0 0;
+  color: #b42318;
+  font-size: .875em;
+}
+
+.dar-autocomplete__sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

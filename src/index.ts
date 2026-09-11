@@ -1,34 +1,19 @@
-//Core entrypoint
-
-export {
-    createDarClient,
-    DarApiError,
-} from "./client.js"
-
+export { createAdressevaelgerClient, createProxyClient } from './client.js'
+export type { AdressevaelgerClientOptions, DarClient, ProxyClientOptions } from './client.js'
+export { createDarAutocompleteController, darAutocompleteLabels } from './controller.js'
 export type {
-    CreateDarClientOptions,
-    DarClient,
-} from "./client.js"
-
-export {
-    createAutocomplete,
-} from "./autocomplete.js"
-
+  DarAutocompleteControllerOptions,
+  DarAutocompleteOptions,
+  DarAutocompleteState
+} from './controller.js'
 export type {
-    DarAutocompleteController,
-    DarAutocompleteOptions,
-    DarAutocompleteState,
-    DarAutocompleteStatus,
-} from "./autocomplete.js"
-
-export type {
-    DarAddress,
-    DarAddressResult,
-    DarHouseNumberResult,
-    DarRequestOptions,
-    DarSearchOptions,
-    DarSearchResponse,
-    DarSearchResult,
-    DarStreetPostalCodeResult,
-    DarStreetResult,
-} from "./types.js"
+  AdressevaelgerAddressResponse,
+  AdressevaelgerSearchResponse,
+  DarAddressDetails,
+  DarAddressSuggestion,
+  DarAddressValue,
+  DarRefinementSuggestion,
+  DarSearchOptions,
+  DarSearchResultType,
+  DarSuggestion
+} from './types.js'
