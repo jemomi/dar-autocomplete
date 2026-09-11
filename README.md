@@ -95,3 +95,14 @@ Search results retain Adressevaelger's supported result types:
 ## Accessibility
 
 The browser adapter implements the combobox/listbox ARIA pattern, keyboard navigation, live status messages, native form validity, `required`, `disabled`, `readonly`, form reset, and cleanup through `destroy()`.
+
+## Future and improvements
+
+- [ ] `Documentation` - JSDoc, Comments, README, Examples, Customization/Styling
+- [ ] Vue/Nuxt component
+- [ ] React/NextJS component
+- [ ] Web-components component
+- [ ] Typing improvements
+- [ ] More data
+
+Want more, or have suggestions? - Feel free to open an issue.
