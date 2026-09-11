@@ -98,6 +98,7 @@ The browser adapter implements the combobox/listbox ARIA pattern, keyboard navig
 
 ## Future and improvements
 
+- [ ] Migration guide
 - [ ] `Documentation` - JSDoc, Comments, README, Examples, Customization/Styling
 - [ ] Tests
 - [ ] Vue/Nuxt component
