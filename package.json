@@ -1,17 +1,39 @@
 {
   "name": "dar-autocomplete",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "Headless Danish address autocomplete using Danmarks Adresseregister (DAR)",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser.d.ts",
+      "import": "./dist/browser.js"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "typescript": "^7.0.2",
-    "vitest": "^5.0.0"
-  }
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "dar",
+    "dawa",
+    "adresse",
+    "address",
+    "autocomplete",
+    "denmark",
+    "danish",
+    "adressevaelger",
+    "danmarks-adresseregister",
+    "danmark"
+  ],
+  "license": "MIT"
 }
