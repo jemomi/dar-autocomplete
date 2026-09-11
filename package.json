@@ -1,5 +1,14 @@
 {
   "name": "dar-autocomplete",
+  "author": "Jens Morten Mikkelsen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jemomi/dar-autocomplete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jemomi/dar-autocomplete/issues"
+  },
+  "homepage": "https://github.com/jemomi/dar-autocomplete#readme",
   "version": "0.1.0",
   "description": "Framework-agnostic Danish address autocomplete backed by Adressevaelger.dk",
   "type": "module",
@@ -26,8 +35,8 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc -p tsconfig.build.json && cp src/style.css dist/style.css",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json && node -e \"require('fs').copyFileSync('src/style.css', 'dist/style.css')\"",
     "test": "npm run build && node --test test/*.test.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prepublishOnly": "npm run typecheck && npm test"
