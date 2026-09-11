@@ -5,7 +5,8 @@
         "moduleResolution": "NodeNext",
         "lib": [
             "ES2022",
-            "DOM"
+            "DOM",
+            "DOM.Iterable"
         ],
         "rootDir": "src",
         "outDir": "dist",
@@ -13,6 +14,8 @@
         "declarationMap": true,
         "sourceMap": true,
         "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
         "skipLibCheck": true
     },
     "include": [
