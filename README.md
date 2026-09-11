@@ -105,5 +105,6 @@ The browser adapter implements the combobox/listbox ARIA pattern, keyboard navig
 - [ ] Web-components component
 - [ ] Typing improvements
 - [ ] More data
+- [ ] Dark-mode support
 
 Want more, or have suggestions? - Feel free to open an issue.
